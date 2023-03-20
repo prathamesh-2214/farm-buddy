@@ -1,0 +1,14 @@
+[versions]
+agp = "7.4.2"
+kotlin = "1.8.0"
+
+[libraries]
+androidx-appcompat = { module= "androidx.appcompat:appcompat", version = "1.6.1" }
+androidx-coreKtx = { module= "androidx.core:core-ktx", version = "1.9.0" }
+androidx-constraintlayout = { module= "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
+google-material = { module= "com.google.android.mateial:material", version = "1.8.0" }
+
+[plugins]
+android-app = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
