@@ -7,4 +7,10 @@
   <string name="forgot_password">Forgot password?</string>
   <string name="or">OR</string>
   <string name="sign_up">Sign up</string>
+  <string name="title_sign_up">Sign up</string>
+  <string name="get_otp">Get OTP</string>
+  <string name="btn_already_registered">Already have an account? Log in</string>
+  <string name="enter_otp">Enter OTP</string>
+  <string name="verify_your_number">Verify your number</string>
+  <string name="verify">Verify</string>
 </resources>

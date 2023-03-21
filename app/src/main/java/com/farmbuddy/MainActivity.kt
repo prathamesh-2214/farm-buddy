@@ -1,6 +1,9 @@
 package com.farmbuddy
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.findNavController
+import com.farmbuddy.databinding.ActivityMainBinding
 
 /**
  * Launcher activity. User is asked to login to the application.
@@ -9,8 +12,22 @@ import android.os.Bundle
  * - Reset his/her password
  */
 class MainActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_login)
+
+  private lateinit var binding: ActivityMainBinding
+
+  private val backPressedCallback = object : OnBackPressedCallback(true) {
+    override fun handleOnBackPressed() {
+      if (!findNavController(binding.root.id).navigateUp()) {
+        finish()
+      }
     }
+  }
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    binding = ActivityMainBinding.inflate(layoutInflater)
+    setContentView(binding.root)
+
+    onBackPressedDispatcher.addCallback(backPressedCallback)
+  }
 }

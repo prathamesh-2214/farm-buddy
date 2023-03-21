@@ -1,6 +1,7 @@
 plugins {
   alias(libs.plugins.android.app)
   alias(libs.plugins.kotlin)
+  alias(libs.plugins.androidx.navSafeArgs)
 }
 
 android {

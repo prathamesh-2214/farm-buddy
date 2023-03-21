@@ -1,17 +1,19 @@
 [versions]
 agp = "7.4.2"
 kotlin = "1.8.0"
+androidxNav = "2.5.3"
 
 [libraries]
 androidx-appcompat = { module= "androidx.appcompat:appcompat", version = "1.6.1" }
 androidx-coreKtx = { module= "androidx.core:core-ktx", version = "1.9.0" }
 androidx-constraintlayout = { module= "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
-androidx-navFragmentKtx = { module = "androidx.navigation:navigation-fragment-ktx", version = "2.5.3"}
-androidx-navUiKtx = { module = "androidx.navigation:navigation-ui-ktx", version = "2.5.3"}
-androidx-navDynamicFeatures = { module = "androidx.navigation:navigation-dynamic-features-fragment", version = "2.5.3"}
+androidx-navFragmentKtx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidxNav" }
+androidx-navUiKtx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidxNav"}
+androidx-navDynamicFeatures = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "androidxNav" }
 google-material = { module= "com.google.android.material:material", version = "1.8.0" }
 
 [plugins]
 android-app = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+androidx-navSafeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidxNav" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

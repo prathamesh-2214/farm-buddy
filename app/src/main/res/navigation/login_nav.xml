@@ -7,5 +7,27 @@
   <fragment
     android:id="@+id/loginFragment"
     android:name="com.farmbuddy.fragments.LoginFragment"
-    android:label="LoginFragment" />
+    android:label="LoginFragment" >
+    <action
+      android:id="@+id/action_loginFragment_to_signupPhoneFragment"
+      app:destination="@id/signupPhoneFragment" />
+    <action
+      android:id="@+id/action_loginFragment_to_verifyOtpFragment"
+      app:destination="@id/verifyOtpFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/signupPhoneFragment"
+    android:name="com.farmbuddy.fragments.SignupPhoneFragment"
+    android:label="SignupPhoneFragment" >
+    <action
+      android:id="@+id/action_signupPhoneFragment_to_verifyOtpFragment"
+      app:destination="@id/verifyOtpFragment" />
+    <action
+      android:id="@+id/action_signupPhoneFragment_to_loginFragment"
+      app:destination="@id/loginFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/verifyOtpFragment"
+    android:name="com.farmbuddy.fragments.VerifyOtpFragment"
+    android:label="VerifyOtpFragment" />
 </navigation>
