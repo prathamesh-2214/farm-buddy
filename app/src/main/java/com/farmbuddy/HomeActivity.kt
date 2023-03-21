@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * Main screen that is shown when the user's login session is active.
  */
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)

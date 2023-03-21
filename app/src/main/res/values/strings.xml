@@ -1,3 +1,10 @@
 <resources>
   <string name="app_name">FarmBuddy</string>
+  <string name="email_address">Email address</string>
+  <string name="phone_number">Phone number</string>
+  <string name="title_log_in">Log in</string>
+  <string name="title_login">Login</string>
+  <string name="forgot_password">Forgot password?</string>
+  <string name="or">OR</string>
+  <string name="sign_up">Sign up</string>
 </resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".fragments.LoginFragment">
+
+  <TextView
+    android:id="@+id/_or"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:text="@string/or"
+    app:layout_constraintEnd_toStartOf="@id/_divider_end"
+    app:layout_constraintStart_toEndOf="@id/_divider_start"
+    app:layout_constraintTop_toBottomOf="@id/forgot_password" />
+
+  <View
+    android:id="@+id/_divider_start"
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_marginStart="32dp"
+    android:background="?attr/colorOutline"
+    app:layout_constraintBottom_toBottomOf="@id/_or"
+    app:layout_constraintEnd_toStartOf="@id/_or"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/_or" />
+
+  <View
+    android:id="@+id/_divider_end"
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_marginEnd="32dp"
+    android:background="?attr/colorOutline"
+    app:layout_constraintBottom_toBottomOf="@id/_or"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/_or"
+    app:layout_constraintTop_toTopOf="@id/_or" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/forgot_password"
+    style="@style/Widget.Material3.Button.TextButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:text="@string/forgot_password"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/login" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/login"
+    android:layout_width="0dp"
+    android:layout_height="56dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:text="@string/title_log_in"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/phone"
+    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/sign_up"
+    style="@style/Widget.Material3.Button.OutlinedButton"
+    android:layout_width="0dp"
+    android:layout_height="56dp"
+    android:text="@string/sign_up"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@id/login"
+    app:layout_constraintStart_toStartOf="@id/login"
+    app:layout_constraintTop_toBottomOf="@id/_or"
+    app:layout_constraintVertical_bias="0.3"
+    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+<!--  <com.google.android.material.imageview.ShapeableImageView-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="0dp"-->
+<!--    app:layout_constraintBottom_toBottomOf="@id/title"-->
+<!--    app:layout_constraintEnd_toEndOf="@id/title"-->
+<!--    app:layout_constraintStart_toStartOf="@id/title"-->
+<!--    app:layout_constraintTop_toTopOf="@id/title"-->
+<!--    app:srcCompat="@drawable/ic_leaf" />-->
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/phone"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:hint="@string/phone_number"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.4"
+    app:startIconDrawable="@drawable/ic_phone"
+    app:startIconTint="?attr/colorOnPrimaryContainer">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="32dp"
+    android:text="@string/title_login"
+    android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+    app:layout_constraintBottom_toTopOf="@id/phone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.farmbuddy
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 /**
@@ -9,9 +8,9 @@ import android.os.Bundle
  * - Signup to the application
  * - Reset his/her password
  */
-class LoginActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.fragment_login)
     }
 }
