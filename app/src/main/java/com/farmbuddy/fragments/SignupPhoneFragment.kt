@@ -27,11 +27,11 @@ class SignupPhoneFragment : BaseFragment(R.layout.fragment_signup_phone) {
     super.onViewCreated(view, savedInstanceState)
     binding.getOtp.setOnClickListener {
       findNavController().navigate(
-        SignupPhoneFragmentDirections.actionSignupPhoneFragmentToVerifyOtpFragment())
+        SignupPhoneFragmentDirections.actionSignupPhoneFragmentToVerifyOtpFragment(true))
     }
 
     binding.login.setOnClickListener {
-      findNavController().navigate(SignupPhoneFragmentDirections.actionSignupPhoneFragmentToLoginFragment())
+      findNavController().navigateUp()
     }
   }
 }

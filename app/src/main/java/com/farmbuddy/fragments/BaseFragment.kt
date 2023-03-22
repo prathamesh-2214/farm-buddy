@@ -14,6 +14,5 @@ open class BaseFragment(@LayoutRes content: Int = 0) : Fragment(content) {
     super.onCreate(savedInstanceState)
     enterTransition = MaterialFadeThrough()
     exitTransition = MaterialFadeThrough()
-//    reenterTransition = MaterialFadeThrough()
   }
 }

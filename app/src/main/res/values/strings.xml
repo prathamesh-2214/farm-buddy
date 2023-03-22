@@ -13,4 +13,13 @@
   <string name="enter_otp">Enter OTP</string>
   <string name="verify_your_number">Verify your number</string>
   <string name="verify">Verify</string>
+  <string name="category_hint">I\'m a …</string>
+  <string name="next">Next</string>
+  <string name="tell_us_about_yourself">Tell us about yourself</string>
+
+  <string-array name="categories">
+    <item>Small Farmer</item>
+    <item>Big Farmer</item>
+    <item>Manager</item>
+  </string-array>
 </resources>

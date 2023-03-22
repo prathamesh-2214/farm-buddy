@@ -22,12 +22,21 @@
     <action
       android:id="@+id/action_signupPhoneFragment_to_verifyOtpFragment"
       app:destination="@id/verifyOtpFragment" />
-    <action
-      android:id="@+id/action_signupPhoneFragment_to_loginFragment"
-      app:destination="@id/loginFragment" />
   </fragment>
   <fragment
     android:id="@+id/verifyOtpFragment"
     android:name="com.farmbuddy.fragments.VerifyOtpFragment"
-    android:label="VerifyOtpFragment" />
+    android:label="VerifyOtpFragment" >
+    <argument
+      android:name="isSigningUp"
+      app:argType="boolean"
+      android:defaultValue="false" />
+    <action
+      android:id="@+id/action_verifyOtpFragment_to_personalInfoFragment"
+      app:destination="@id/personalInfoFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/personalInfoFragment"
+    android:name="com.farmbuddy.fragments.PersonalInfoFragment"
+    android:label="PersonalInfoFragment" />
 </navigation>
