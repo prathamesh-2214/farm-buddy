@@ -15,10 +15,9 @@ class KycFragment : BaseFragment(R.layout.fragment_kyc) {
   private lateinit var binding: FragmentKycBinding
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-    savedInstanceState: Bundle?): View {
-    return FragmentKycBinding.inflate(inflater, container, false).let {
-      binding = it
-      it.root
+    savedInstanceState: Bundle?): View? {
+    return super.onCreateView(inflater, container, savedInstanceState)!!.also {
+      binding = FragmentKycBinding.bind(it)
     }
   }
 }

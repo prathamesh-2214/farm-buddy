@@ -17,9 +17,8 @@ class VerifyOtpFragment : BaseFragment(R.layout.fragment_verify_otp) {
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?): View {
-    return FragmentVerifyOtpBinding.inflate(inflater, container, false).let {
-      binding = it
-      it.root
+    return super.onCreateView(inflater, container, savedInstanceState)!!.also {
+      binding = FragmentVerifyOtpBinding.bind(it)
     }
   }
 

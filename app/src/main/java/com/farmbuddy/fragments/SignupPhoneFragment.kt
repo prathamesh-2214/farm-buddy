@@ -17,9 +17,8 @@ class SignupPhoneFragment : BaseFragment(R.layout.fragment_signup_phone) {
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?): View? {
-    return FragmentSignupPhoneBinding.inflate(inflater, container, false).let {
-      binding = it
-      it.root
+    return super.onCreateView(inflater, container, savedInstanceState)!!.also {
+      binding = FragmentSignupPhoneBinding.bind(it)
     }
   }
 

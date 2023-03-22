@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/login_nav"
   app:startDestination="@id/loginFragment">
 
   <fragment
     android:id="@+id/loginFragment"
+    android:label="LoginFragment"
     android:name="com.farmbuddy.fragments.LoginFragment"
-    android:label="LoginFragment" >
+    tools:layout="@layout/fragment_login">
     <action
       android:id="@+id/action_loginFragment_to_signupPhoneFragment"
       app:destination="@id/signupPhoneFragment" />
@@ -17,26 +19,38 @@
   </fragment>
   <fragment
     android:id="@+id/signupPhoneFragment"
+    android:label="SignupPhoneFragment"
     android:name="com.farmbuddy.fragments.SignupPhoneFragment"
-    android:label="SignupPhoneFragment" >
+    tools:layout="@layout/fragment_signup_phone">
     <action
       android:id="@+id/action_signupPhoneFragment_to_verifyOtpFragment"
       app:destination="@id/verifyOtpFragment" />
   </fragment>
   <fragment
     android:id="@+id/verifyOtpFragment"
+    android:label="VerifyOtpFragment"
     android:name="com.farmbuddy.fragments.VerifyOtpFragment"
-    android:label="VerifyOtpFragment" >
-    <argument
-      android:name="isSigningUp"
-      app:argType="boolean"
-      android:defaultValue="false" />
+    tools:layout="@layout/fragment_verify_otp">
     <action
       android:id="@+id/action_verifyOtpFragment_to_personalInfoFragment"
       app:destination="@id/personalInfoFragment" />
+    <argument
+      android:defaultValue="false"
+      android:name="isSigningUp"
+      app:argType="boolean" />
   </fragment>
   <fragment
     android:id="@+id/personalInfoFragment"
+    android:label="PersonalInfoFragment"
     android:name="com.farmbuddy.fragments.PersonalInfoFragment"
-    android:label="PersonalInfoFragment" />
+    tools:layout="@layout/fragment_personal_info">
+    <action
+      android:id="@+id/action_personalInfoFragment_to_kycFragment"
+      app:destination="@id/kycFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/kycFragment"
+    android:label="KycFragment"
+    android:name="com.farmbuddy.fragments.KycFragment"
+    tools:layout="@layout/fragment_kyc" />
 </navigation>
