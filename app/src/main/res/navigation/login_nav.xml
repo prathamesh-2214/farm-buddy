@@ -45,12 +45,12 @@
     android:name="com.farmbuddy.fragments.PersonalInfoFragment"
     tools:layout="@layout/fragment_personal_info">
     <action
-      android:id="@+id/action_personalInfoFragment_to_kycFragment"
-      app:destination="@id/kycFragment" />
+      android:id="@+id/action_personalInfoFragment_to_bankDetailsFragment"
+      app:destination="@id/bankDetails" />
   </fragment>
   <fragment
-    android:id="@+id/kycFragment"
-    android:label="KycFragment"
-    android:name="com.farmbuddy.fragments.KycFragment"
-    tools:layout="@layout/fragment_kyc" />
+    android:id="@+id/bankDetails"
+    android:label="BankDetailsFragment"
+    android:name="com.farmbuddy.fragments.BankDetailsFragment"
+    tools:layout="@layout/fragment_bank_details" />
 </navigation>

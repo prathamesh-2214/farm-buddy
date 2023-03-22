@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.farmbuddy.R
 import com.farmbuddy.databinding.FragmentPersonalInfoBinding
 
@@ -18,6 +19,14 @@ class PersonalInfoFragment : BaseFragment(R.layout.fragment_personal_info) {
     savedInstanceState: Bundle?): View {
     return super.onCreateView(inflater, container, savedInstanceState)!!.also {
       binding = FragmentPersonalInfoBinding.bind(it)
+    }
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    binding.next.setOnClickListener {
+      findNavController().navigate(
+        PersonalInfoFragmentDirections.actionPersonalInfoFragmentToBankDetailsFragment())
     }
   }
 }

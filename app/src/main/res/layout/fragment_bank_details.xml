@@ -12,7 +12,7 @@
     android:layout_marginTop="32dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:text="@string/tell_us_about_yourself"
+    android:text="@string/bank_details"
     android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
@@ -24,20 +24,21 @@
     android:layout_margin="32dp"
     android:text="@string/next"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/pan"
+    app:layout_constraintTop_toBottomOf="@id/ifsc"
     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
 
   <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/first_name"
+    android:id="@+id/accountName"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="32dp"
+    android:layout_marginTop="16dp"
     android:layout_marginStart="16dp"
-    android:layout_marginEnd="8dp"
-    android:hint="@string/first_name"
-    app:layout_constraintEnd_toStartOf="@id/last_name"
+    android:layout_marginEnd="16dp"
+    android:hint="@string/account_name"
+    app:helperText="@string/acc_helper"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/_title"
+    app:layout_constraintTop_toBottomOf="@id/bank"
     app:layout_constraintVertical_bias="0.4">
 
     <com.google.android.material.textfield.TextInputEditText
@@ -47,81 +48,91 @@
   </com.google.android.material.textfield.TextInputLayout>
 
   <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/last_name"
+    android:id="@+id/accountNumber"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="32dp"
-    android:layout_marginStart="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:hint="@string/last_name"
+    android:hint="@string/account_number"
+    app:counterEnabled="true"
+    app:counterMaxLength="18"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@id/first_name"
-    app:layout_constraintTop_toBottomOf="@id/_title"
-    app:layout_constraintVertical_bias="0.4">
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/accountName">
 
     <com.google.android.material.textfield.TextInputEditText
       android:layout_width="match_parent"
-      android:layout_height="match_parent" />
+      android:layout_height="match_parent"
+      android:digits="0123456789"
+      android:inputType="numberPassword" />
 
   </com.google.android.material.textfield.TextInputLayout>
 
   <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/category"
+    android:id="@+id/accountNumber_confirm"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:hint="@string/confirm_account_number"
+    app:counterEnabled="true"
+    app:counterMaxLength="18"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/accountNumber">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:digits="0123456789"
+      android:inputType="number" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/bank"
     style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:hint="@string/category_hint"
+    android:hint="@string/choose_your_bank"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/first_name"
-    app:layout_constraintVertical_bias="0.4">
+    app:layout_constraintTop_toBottomOf="@id/_title">
 
     <com.google.android.material.textfield.MaterialAutoCompleteTextView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:inputType="none"
-      app:simpleItems="@array/categories" />
+      app:simpleItems="@array/india_banks" />
 
   </com.google.android.material.textfield.TextInputLayout>
 
   <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/aadhar"
+    android:id="@+id/ifsc"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:hint="@string/aadhar_number"
+    android:hint="@string/ifsc_code"
+    app:counterEnabled="true"
+    app:counterMaxLength="11"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/category"
-    app:layout_constraintVertical_bias="0.4">
+    app:layout_constraintTop_toBottomOf="@id/accountNumber_confirm">
 
     <com.google.android.material.textfield.TextInputEditText
       android:layout_width="match_parent"
-      android:layout_height="match_parent" />
+      android:layout_height="match_parent"
+      android:inputType="none"
+      app:simpleItems="@array/india_banks" />
 
   </com.google.android.material.textfield.TextInputLayout>
 
-  <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/pan"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="16dp"
-    android:hint="@string/pan_number"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/aadhar">
-
-    <com.google.android.material.textfield.TextInputEditText
-      android:layout_width="match_parent"
-      android:layout_height="match_parent" />
-
-  </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
