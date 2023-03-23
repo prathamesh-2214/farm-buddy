@@ -38,6 +38,9 @@
       android:defaultValue="false"
       android:name="isSigningUp"
       app:argType="boolean" />
+    <action
+      android:id="@+id/action_verifyOtpFragment_to_homeActivity"
+      app:destination="@id/homeActivity" />
   </fragment>
   <fragment
     android:id="@+id/personalInfoFragment"
@@ -52,5 +55,14 @@
     android:id="@+id/bankDetails"
     android:label="BankDetailsFragment"
     android:name="com.farmbuddy.fragments.BankDetailsFragment"
-    tools:layout="@layout/fragment_bank_details" />
+    tools:layout="@layout/fragment_bank_details" >
+    <action
+      android:id="@+id/action_bankDetails_to_homeActivity"
+      app:destination="@id/homeActivity" />
+  </fragment>
+  <activity
+    android:id="@+id/homeActivity"
+    android:name="com.farmbuddy.HomeActivity"
+    android:label="activity_home"
+    tools:layout="@layout/activity_home" />
 </navigation>

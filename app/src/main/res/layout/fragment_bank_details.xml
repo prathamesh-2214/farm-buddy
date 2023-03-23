@@ -19,11 +19,11 @@
     app:layout_constraintTop_toTopOf="parent" />
 
   <com.google.android.material.button.MaterialButton
-    android:id="@+id/next"
+    android:id="@+id/signup"
     android:layout_width="wrap_content"
     android:layout_height="56dp"
     android:layout_margin="32dp"
-    android:text="@string/next"
+    android:text="@string/sign_up"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/ifsc"
     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />

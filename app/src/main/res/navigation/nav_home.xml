@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_home"
+  app:startDestination="@id/homeFragment">
+
+  <fragment
+    android:id="@+id/homeFragment"
+    android:label="HomeFragment"
+    android:name="com.farmbuddy.fragments.HomeFragment"
+    tools:layout="@layout/fragment_home" />
+  <fragment
+    android:id="@+id/searchFragment"
+    android:label="SearchFragment"
+    android:name="com.farmbuddy.fragments.SearchFragment"
+    tools:layout="@layout/fragment_search" />
+  <fragment
+    android:id="@+id/accountFragment"
+    android:label="AccountFragment"
+    android:name="com.farmbuddy.fragments.AccountFragment"
+    tools:layout="@layout/fragment_account" />
+  <fragment
+    android:id="@+id/settingsFragment"
+    android:label="SettingsFragment"
+    android:name="com.farmbuddy.fragments.SettingsFragment"
+    tools:layout="@layout/fragment_settings" />
+</navigation>
