@@ -17,7 +17,7 @@ class MainActivity : BaseActivity() {
 
   private val backPressedCallback = object : OnBackPressedCallback(true) {
     override fun handleOnBackPressed() {
-      if (!findNavController(binding.root.id).navigateUp()) {
+      if (!findNavController(binding.fragmentContainer.id).navigateUp()) {
         finish()
       }
     }

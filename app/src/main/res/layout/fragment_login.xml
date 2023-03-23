@@ -76,14 +76,14 @@
     app:layout_constraintVertical_bias="0.3"
     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
 
-<!--  <com.google.android.material.imageview.ShapeableImageView-->
-<!--    android:layout_width="0dp"-->
-<!--    android:layout_height="0dp"-->
-<!--    app:layout_constraintBottom_toBottomOf="@id/title"-->
-<!--    app:layout_constraintEnd_toEndOf="@id/title"-->
-<!--    app:layout_constraintStart_toStartOf="@id/title"-->
-<!--    app:layout_constraintTop_toTopOf="@id/title"-->
-<!--    app:srcCompat="@drawable/ic_leaf" />-->
+  <!--  <com.google.android.material.imageview.ShapeableImageView-->
+  <!--    android:layout_width="0dp"-->
+  <!--    android:layout_height="0dp"-->
+  <!--    app:layout_constraintBottom_toBottomOf="@id/title"-->
+  <!--    app:layout_constraintEnd_toEndOf="@id/title"-->
+  <!--    app:layout_constraintStart_toStartOf="@id/title"-->
+  <!--    app:layout_constraintTop_toTopOf="@id/title"-->
+  <!--    app:srcCompat="@drawable/ic_leaf" />-->
 
   <com.google.android.material.textfield.TextInputLayout
     android:id="@+id/phone"
@@ -112,6 +112,7 @@
     android:padding="32dp"
     android:text="@string/title_login"
     android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+    android:transitionName="title"
     app:layout_constraintBottom_toTopOf="@id/phone"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"

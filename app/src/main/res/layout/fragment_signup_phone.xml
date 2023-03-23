@@ -101,6 +101,7 @@
     android:padding="32dp"
     android:text="@string/title_sign_up"
     android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+    android:transitionName="title"
     app:layout_constraintBottom_toTopOf="@id/phone"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"

@@ -10,12 +10,12 @@ import com.farmbuddy.databinding.FragmentBankDetailsBinding
 /**
  * @author Akash Yadav
  */
-class BankDetailsFragment : BaseFragment(R.layout.fragment_bank_details) {
+class BankDetailsFragment : BaseSignupFragment(R.layout.fragment_bank_details) {
 
   private lateinit var binding: FragmentBankDetailsBinding
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-    savedInstanceState: Bundle?): View? {
+    savedInstanceState: Bundle?): View {
     return super.onCreateView(inflater, container, savedInstanceState)!!.also {
       binding = FragmentBankDetailsBinding.bind(it)
     }

@@ -11,7 +11,7 @@ import com.farmbuddy.databinding.FragmentPersonalInfoBinding
 /**
  * @author Akash Yadav
  */
-class PersonalInfoFragment : BaseFragment(R.layout.fragment_personal_info) {
+class PersonalInfoFragment : BaseSignupFragment(R.layout.fragment_personal_info) {
 
   private lateinit var binding: FragmentPersonalInfoBinding
 
