@@ -24,8 +24,27 @@
     android:layout_margin="32dp"
     android:text="@string/next"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/pan"
+    app:layout_constraintTop_toBottomOf="@id/district"
     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/district"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:hint="@string/district"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/state"
+    app:layout_constraintVertical_bias="0.4">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  </com.google.android.material.textfield.TextInputLayout>
 
   <com.google.android.material.textfield.TextInputLayout
     android:id="@+id/first_name"
@@ -84,6 +103,28 @@
       android:layout_height="match_parent"
       android:inputType="none"
       app:simpleItems="@array/categories" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/state"
+    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:hint="@string/select_state"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/pan"
+    app:layout_constraintVertical_bias="0.4">
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:inputType="none"
+      app:simpleItems="@array/india_states" />
 
   </com.google.android.material.textfield.TextInputLayout>
 
