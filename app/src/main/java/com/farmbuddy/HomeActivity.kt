@@ -1,7 +1,10 @@
 package com.farmbuddy
 
 import android.os.Bundle
-import androidx.navigation.findNavController
+import android.view.ViewGroup.MarginLayoutParams
+import android.view.ViewTreeObserver
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updateMarginsRelative
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.farmbuddy.databinding.ActivityHomeBinding
@@ -22,5 +25,14 @@ class HomeActivity : BaseActivity() {
     setContentView(binding.root)
 
     binding.navigation.setupWithNavController(navController)
+    binding.root.viewTreeObserver.addOnGlobalLayoutListener(object :
+      ViewTreeObserver.OnGlobalLayoutListener {
+      override fun onGlobalLayout() {
+        binding.root.viewTreeObserver.removeOnGlobalLayoutListener(this)
+        binding.fragmentContainer.updateLayoutParams<MarginLayoutParams> {
+          updateMarginsRelative(bottom = binding.navigation.height)
+        }
+      }
+    })
   }
 }
