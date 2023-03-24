@@ -34,6 +34,9 @@
   <string name="account">Account</string>
   <string name="search">Search</string>
   <string name="home">Home</string>
+  <string name="cultivating_the_future">Cultivating\nThe Future</string>
+  <string name="featured_post">Featured Post</string>
+  <string name="see_all">See All</string>
 
   <string-array name="categories">
     <item>Small Farmer</item>

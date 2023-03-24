@@ -1,7 +1,10 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
   alias(libs.plugins.android.app)
   alias(libs.plugins.kotlin)
   alias(libs.plugins.androidx.navSafeArgs)
+  id("com.google.devtools.ksp")
   id("kotlin-parcelize")
 }
 
@@ -39,7 +42,15 @@ android {
   }
 }
 
+tasks.withType<KotlinCompile> {
+  kotlinOptions {
+    jvmTarget = "11"
+  }
+}
+
 dependencies {
+  ksp(libs.glide.ksp)
+
   implementation(libs.androidx.appcompat)
   implementation(libs.androidx.constraintlayout)
   implementation(libs.androidx.coreKtx)
@@ -47,6 +58,8 @@ dependencies {
   implementation(libs.androidx.navUiKtx)
   implementation(libs.androidx.navDynamicFeatures)
   implementation(libs.google.material)
+  implementation(libs.glide)
+  implementation(libs.glide.okhttpIntegration)
 
   testImplementation("junit:junit:4.13.2")
   androidTestImplementation("androidx.test.ext:junit:1.1.5")
