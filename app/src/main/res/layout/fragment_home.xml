@@ -1,73 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
-  <TextView
-    android:id="@+id/title"
-    android:textStyle="bold"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:text="@string/cultivating_the_future"
-    android:textAllCaps="true"
-    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-  <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/featured_list"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:orientation="horizontal"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/featured_titile"
-    tools:listitem="@layout/layout_featured_post" />
+    <TextView
+      android:id="@+id/title"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="16dp"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp"
+      android:text="@string/cultivating_the_future"
+      android:textAllCaps="true"
+      android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
-  <com.google.android.material.button.MaterialButton
-    android:id="@+id/see_all"
-    style="@style/Widget.Material3.Button.TextButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/see_all"
-    app:layout_constraintEnd_toEndOf="@id/account"
-    app:layout_constraintTop_toTopOf="@id/featured_titile" />
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/featured_list"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp"
+      android:clipChildren="false"
+      android:clipToPadding="false"
+      android:orientation="horizontal"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/featured_titile"
+      tools:listitem="@layout/layout_featured_post" />
 
-  <com.google.android.material.button.MaterialButton
-    android:id="@+id/account"
-    style="@style/Widget.Material3.Button.IconButton.Filled"
-    android:layout_width="56dp"
-    android:layout_height="56dp"
-    android:layout_margin="16dp"
-    android:paddingStart="14dp"
-    android:paddingEnd="0dp"
-    app:icon="@drawable/ic_account"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recommended_list"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp"
+      android:orientation="vertical"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/recommended_titile"
+      tools:listitem="@layout/layout_recommended" />
 
-  <com.google.android.material.textview.MaterialTextView
-    android:id="@+id/featured_titile"
-    android:textStyle="bold"
-    android:layout_width="wrap_content"
-    android:layout_height="48dp"
-    android:layout_marginTop="32dp"
-    android:layout_marginBottom="8dp"
-    android:gravity="center_vertical"
-    android:text="@string/featured_post"
-    android:textAllCaps="true"
-    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-    app:layout_constraintStart_toStartOf="@id/title"
-    app:layout_constraintTop_toBottomOf="@id/title" />
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/account"
+      style="@style/Widget.Material3.Button.IconButton.Filled"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      android:layout_margin="16dp"
+      android:paddingStart="14dp"
+      android:paddingEnd="0dp"
+      app:icon="@drawable/ic_account"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/see_all"
+      style="@style/Widget.Material3.Button.TextButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/see_all"
+      app:layout_constraintEnd_toEndOf="@id/account"
+      app:layout_constraintTop_toTopOf="@id/featured_titile" />
+
+    <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/recommended_titile"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="48dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginBottom="8dp"
+      android:gravity="center_vertical"
+      android:text="@string/recommended_for_you"
+      android:textAllCaps="true"
+      android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+      app:layout_constraintStart_toStartOf="@id/title"
+      app:layout_constraintTop_toBottomOf="@id/featured_list" />
+
+    <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/featured_titile"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="48dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginBottom="8dp"
+      android:gravity="center_vertical"
+      android:text="@string/featured_post"
+      android:textAllCaps="true"
+      android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+      app:layout_constraintStart_toStartOf="@id/title"
+      app:layout_constraintTop_toBottomOf="@id/title" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

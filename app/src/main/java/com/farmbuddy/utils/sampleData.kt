@@ -1,6 +1,7 @@
 package com.farmbuddy.utils
 
-import com.farmbuddy.FeaturedPost
+import com.farmbuddy.models.FeaturedPost
+import com.farmbuddy.models.RecommendedPost
 
 /**
  * @author Akash Yadav
@@ -20,5 +21,14 @@ fun sampleFeaturedPosts(): List<FeaturedPost> {
       FeaturedPost(
         "https://images.unsplash.com/photo-1520017357217-59228ba0935f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHx8&w=1000&q=80",
         "Third post"))
+  }
+}
+
+fun sampleRecommendedPosts() : List<RecommendedPost> {
+  return mutableListOf<RecommendedPost>().apply {
+    add(RecommendedPost("", "Title 1", "Desription 1", listOf("tag1", "tag2", "tag3")))
+    add(RecommendedPost("", "Title 2", "Desription 2", listOf("tag1", "tag2", "tag3")))
+    add(RecommendedPost("", "Title 3", "Desription 3", listOf("tag1", "tag2", "tag3")))
+    add(RecommendedPost("", "Title 4", "Desription 4", listOf("tag1", "tag2", "tag3")))
   }
 }

@@ -1,4 +1,4 @@
-package com.farmbuddy
+package com.farmbuddy.models
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
