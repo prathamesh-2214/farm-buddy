@@ -6,21 +6,14 @@
   android:layout_height="match_parent"
   tools:context=".HomeActivity">
 
-  <androidx.core.widget.NestedScrollView
+  <androidx.fragment.app.FragmentContainerView
+    android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-    <androidx.fragment.app.FragmentContainerView
-      android:id="@+id/fragment_container"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:name="androidx.navigation.fragment.NavHostFragment"
-      app:defaultNavHost="true"
-      app:navGraph="@navigation/nav_home" />
-
-  </androidx.core.widget.NestedScrollView>
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    app:defaultNavHost="true"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    app:navGraph="@navigation/nav_home" />
 
   <com.google.android.material.bottomnavigation.BottomNavigationView
     android:id="@+id/navigation"
