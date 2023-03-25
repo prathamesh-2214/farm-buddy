@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/acc_nav"
+  app:startDestination="@id/profileFragment">
+
+  <fragment
+    android:id="@+id/profileFragment"
+    android:label="ProfileFragment"
+    android:name="com.farmbuddy.fragments.ProfileFragment"
+    tools:layout="@layout/fragment_profile">
+    <action
+      android:id="@+id/action_profileFragment_to_newResourcesFragment"
+      app:destination="@id/newResourcesFragment" />
+    <action
+      android:id="@+id/action_profileFragment_to_checkResourcesFragment"
+      app:destination="@id/checkResourcesFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/newResourcesFragment"
+    android:label="NewResourcesFragment"
+    android:name="com.farmbuddy.fragments.NewResourcesFragment"
+    tools:layout="@layout/fragment_new_resources" />
+  <fragment
+    android:id="@+id/checkResourcesFragment"
+    android:label="CheckResourcesFragment"
+    android:name="com.farmbuddy.fragments.CheckResourcesFragment"
+    tools:layout="@layout/fragment_check_resources" />
+
+</navigation>
