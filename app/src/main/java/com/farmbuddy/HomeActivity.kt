@@ -8,6 +8,7 @@ import androidx.core.view.updateMarginsRelative
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.farmbuddy.databinding.ActivityHomeBinding
+import com.farmbuddy.utils.resolveAttr
 
 /**
  * Main screen that is shown when the user's login session is active.
@@ -25,6 +26,20 @@ class HomeActivity : BaseActivity() {
     setContentView(binding.root)
 
     binding.navigation.setupWithNavController(navController)
+
+    navController.addOnDestinationChangedListener { _, destination, _ ->
+      window?.apply {
+        val attr = if (destination.id == R.id.accountFragment) {
+          com.google.android.material.R.attr.colorPrimaryContainer
+        } else {
+          com.google.android.material.R.attr.colorSurface
+        }
+        decorView.post {
+          statusBarColor = resolveAttr(attr)
+        }
+      }
+    }
+
     binding.root.viewTreeObserver.addOnGlobalLayoutListener(object :
       ViewTreeObserver.OnGlobalLayoutListener {
       override fun onGlobalLayout() {

@@ -38,6 +38,8 @@
   <string name="featured_post">Featured Post</string>
   <string name="see_all">See All</string>
   <string name="recommended_for_you">Recommended For You</string>
+  <string name="new_resources">New resources</string>
+  <string name="check_resources">Check resources</string>
 
   <string-array name="categories">
     <item>Small Farmer</item>

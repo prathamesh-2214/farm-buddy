@@ -4,13 +4,98 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Account"
-    app:layout_constraintBottom_toBottomOf="parent"
+  <View
+    android:id="@+id/rotated_bg"
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:background="?attr/colorPrimaryContainer"
+    android:rotation="-25"
+    android:scaleX="3.1"
+    android:scaleY="3.1"
+    android:translationY="-32dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/new_resources"
+    style="@style/Widget.Material3.Button.IconButton.Filled"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:text="@string/new_resources"
+    app:icon="@drawable/ic_add"
+    app:iconPadding="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/category"
+    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/check_resources"
+    style="@style/Widget.Material3.Button.IconButton.Filled"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:text="@string/check_resources"
+    app:icon="@drawable/ic_list"
+    app:iconPadding="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/new_resources"
+    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+  <com.google.android.material.card.MaterialCardView
+    android:id="@+id/avatar_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:cardElevation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rotated_bg"
+    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
+    app:strokeColor="?attr/colorSurface"
+    app:strokeWidth="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+      android:id="@+id/avatar"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:scaleType="centerCrop"
+      app:srcCompat="@drawable/itsaky" />
+
+  </com.google.android.material.card.MaterialCardView>
+
+  <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/category"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="Big Farmer"
+    android:textAppearance="?attr/textAppearanceBodyLarge"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/name" />
+
+  <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/name"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="Akash Yadav"
+    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/avatar_container" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
