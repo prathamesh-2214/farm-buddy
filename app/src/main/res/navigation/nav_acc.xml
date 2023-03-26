@@ -21,11 +21,19 @@
     android:id="@+id/newResourcesFragment"
     android:label="NewResourcesFragment"
     android:name="com.farmbuddy.fragments.NewResourcesFragment"
-    tools:layout="@layout/fragment_new_resources" />
+    tools:layout="@layout/fragment_new_resources" >
+    <action
+      android:id="@+id/action_newResourcesFragment_to_resourceListFragment"
+      app:destination="@id/resourceListFragment" />
+  </fragment>
   <fragment
     android:id="@+id/checkResourcesFragment"
     android:label="CheckResourcesFragment"
     android:name="com.farmbuddy.fragments.CheckResourcesFragment"
     tools:layout="@layout/fragment_check_resources" />
+  <fragment
+    android:id="@+id/resourceListFragment"
+    android:name="com.farmbuddy.fragments.ResourceListFragment"
+    android:label="ResourceListFragment" />
 
 </navigation>

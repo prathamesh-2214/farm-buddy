@@ -4,6 +4,7 @@ import com.farmbuddy.R
 import com.farmbuddy.models.FeaturedPost
 import com.farmbuddy.models.RecommendedPost
 import com.farmbuddy.models.ResourceCategory
+import com.farmbuddy.models.ResourceItem
 
 /**
  * @author Akash Yadav
@@ -41,5 +42,14 @@ fun sampleResourceCategories(): List<ResourceCategory> {
       btnIcon = R.drawable.ic_add))
     add(ResourceCategory(name = "Available Labor", image = "", imgRes = R.drawable.labor,
       btnIcon = R.drawable.ic_list))
+  }
+}
+
+fun sampleResItems() : List<ResourceItem> {
+  return mutableListOf<ResourceItem>().apply {
+    add(ResourceItem("Mahindra Tractor", "Someone", "", 1f, 500, 14, "Lonavala, Maharashtra"))
+    add(ResourceItem("Other Tractor", "Someone Else", "", 1f, 400, 18, "Hadapsar, Maharashtra"))
+    add(ResourceItem("Another Tractor", "Anyone", "", 1f, 700, 5, "Shivaji Nagar, Maharashtra"))
+    add(ResourceItem("Some other Tractor", "Anonymous", "", 1f, 600, 10, "Akurdi, Maharashtra"))
   }
 }

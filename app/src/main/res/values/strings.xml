@@ -41,6 +41,8 @@
   <string name="new_resources">New resources</string>
   <string name="check_resources">Check resources</string>
   <string name="life_just_got_better">Life just got better</string>
+  <string name="available_for_days">Available for %1$d days</string>
+  <string name="rate_day">₹ %1$d / day</string>
 
   <string-array name="categories">
     <item>Small Farmer</item>

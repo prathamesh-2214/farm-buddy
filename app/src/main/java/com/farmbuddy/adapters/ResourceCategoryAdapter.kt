@@ -2,8 +2,10 @@ package com.farmbuddy.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.farmbuddy.databinding.LayoutNewResourceCategoryBinding
+import com.farmbuddy.fragments.NewResourcesFragmentDirections
 import com.farmbuddy.models.ResourceCategory
 
 /**
@@ -29,12 +31,17 @@ internal class ResourceCategoryAdapter(private val items: List<ResourceCategory>
     val binding = holder.binding
 
     binding.title.text = category.name
+
+    // TODO : Set image from URL
     binding.image.setImageResource(category.imgRes!!)
 
     category.btnIcon?.let {
       binding.title.setIconResource(category.btnIcon)
     }
 
-    // TODO : Set image from URL
+    binding.root.setOnClickListener {
+      it.findNavController()
+        .navigate(NewResourcesFragmentDirections.actionNewResourcesFragmentToResourceListFragment())
+    }
   }
 }
