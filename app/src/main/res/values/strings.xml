@@ -40,6 +40,7 @@
   <string name="recommended_for_you">Recommended For You</string>
   <string name="new_resources">New resources</string>
   <string name="check_resources">Check resources</string>
+  <string name="life_just_got_better">Life just got better</string>
 
   <string-array name="categories">
     <item>Small Farmer</item>

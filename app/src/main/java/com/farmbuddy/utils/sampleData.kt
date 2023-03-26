@@ -1,7 +1,9 @@
 package com.farmbuddy.utils
 
+import com.farmbuddy.R
 import com.farmbuddy.models.FeaturedPost
 import com.farmbuddy.models.RecommendedPost
+import com.farmbuddy.models.ResourceCategory
 
 /**
  * @author Akash Yadav
@@ -24,11 +26,20 @@ fun sampleFeaturedPosts(): List<FeaturedPost> {
   }
 }
 
-fun sampleRecommendedPosts() : List<RecommendedPost> {
+fun sampleRecommendedPosts(): List<RecommendedPost> {
   return mutableListOf<RecommendedPost>().apply {
     add(RecommendedPost("", "Title 1", "Desription 1", listOf("tag1", "tag2", "tag3")))
     add(RecommendedPost("", "Title 2", "Desription 2", listOf("tag1", "tag2", "tag3")))
     add(RecommendedPost("", "Title 3", "Desription 3", listOf("tag1", "tag2", "tag3")))
     add(RecommendedPost("", "Title 4", "Desription 4", listOf("tag1", "tag2", "tag3")))
+  }
+}
+
+fun sampleResourceCategories(): List<ResourceCategory> {
+  return mutableListOf<ResourceCategory>().apply {
+    add(ResourceCategory(name = "New Farming Machinery", image = "", imgRes = R.drawable.tractor,
+      btnIcon = R.drawable.ic_add))
+    add(ResourceCategory(name = "Available Labor", image = "", imgRes = R.drawable.labor,
+      btnIcon = R.drawable.ic_list))
   }
 }

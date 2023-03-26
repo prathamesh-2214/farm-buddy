@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="200dp"
+  android:layout_margin="16dp"
+  android:clickable="true"
+  android:descendantFocusability="blocksDescendants"
+  android:focusable="true"
+  app:cardElevation="4dp"
+  app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/image"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:scaleType="centerCrop"
+      app:layout_constraintBottom_toTopOf="@id/title"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:src="@drawable/tractor" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/title"
+      style="@style/Widget.Material3.Button.TextButton.Icon"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="8dp"
+      android:background="@android:color/transparent"
+      android:clickable="false"
+      android:focusable="false"
+      android:gravity="center"
+      android:maxLines="2"
+      android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+      app:icon="@drawable/ic_add"
+      app:iconPadding="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/image"
+      app:rippleColor="@android:color/transparent"
+      tools:text="New Farming Machinery" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
