@@ -11,7 +11,7 @@ import com.farmbuddy.models.ResourceCategory
 /**
  * @author Akash Yadav
  */
-internal class ResourceCategoryAdapter(private val items: List<ResourceCategory>) :
+internal class ResourceCategoryAdapter(private val items: List<ResourceCategory>, private val onClick: ((ResourceCategory) -> Unit)? = null) :
   RecyclerView.Adapter<ResourceCategoryAdapter.VH>() {
 
   internal class VH(internal val binding: LayoutNewResourceCategoryBinding) :
@@ -40,8 +40,7 @@ internal class ResourceCategoryAdapter(private val items: List<ResourceCategory>
     }
 
     binding.root.setOnClickListener {
-      it.findNavController()
-        .navigate(NewResourcesFragmentDirections.actionNewResourcesFragmentToResourceListFragment())
+      onClick?.invoke(category)
     }
   }
 }

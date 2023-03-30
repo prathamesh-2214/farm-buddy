@@ -37,5 +37,9 @@ internal class ResourceListAdapter(private val items: List<ResourceItem>) :
 
     // TODO : Load image from url
     binding.image.setImageResource(R.drawable.tractor)
+
+    if (res.imgRes != null) {
+      binding.image.setImageResource(res.imgRes)
+    }
   }
 }

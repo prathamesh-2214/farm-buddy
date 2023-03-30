@@ -5,7 +5,6 @@ import android.view.View
 import com.farmbuddy.R
 import com.farmbuddy.adapters.ResourceListAdapter
 import com.farmbuddy.databinding.FragmentResourceListBinding
-import com.farmbuddy.utils.sampleResItems
 
 /**
  * @author Akash Yadav
@@ -17,6 +16,7 @@ class ResourceListFragment :
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.resourceList.adapter = ResourceListAdapter(sampleResItems())
+    binding.resourceList.adapter = ResourceListAdapter(
+      ResourceListFragmentArgs.fromBundle(requireArguments()).resources.asList())
   }
 }

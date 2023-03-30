@@ -39,17 +39,42 @@ fun sampleRecommendedPosts(): List<RecommendedPost> {
 fun sampleResourceCategories(): List<ResourceCategory> {
   return mutableListOf<ResourceCategory>().apply {
     add(ResourceCategory(name = "New Farming Machinery", image = "", imgRes = R.drawable.tractor,
-      btnIcon = R.drawable.ic_add))
+      btnIcon = R.drawable.ic_add, subCategories = sampleMachinery()))
     add(ResourceCategory(name = "Available Labor", image = "", imgRes = R.drawable.labor,
-      btnIcon = R.drawable.ic_list))
+      btnIcon = R.drawable.ic_list, subCategories = sampleLabor()))
   }
 }
 
-fun sampleResItems() : List<ResourceItem> {
+fun sampleMachinery(): List<ResourceCategory> {
+  return mutableListOf<ResourceCategory>().apply {
+    add(ResourceCategory(name = "Tractors", image = "", imgRes = R.drawable.tractor, resources = sampleTractors()))
+    add(ResourceCategory(name = "Fertilizer sprays", image = "",
+      imgRes = R.drawable.fertilizer_spray))
+    add(ResourceCategory(name = "Power Tiller", image = "", imgRes = R.drawable.power_tiller))
+    add(ResourceCategory(name = "Combine Harvester", image = "",
+      imgRes = R.drawable.combine_harvester))
+    add(ResourceCategory(name = "Cultivator", image = "", imgRes = R.drawable.cultivator))
+    add(ResourceCategory(name = "Baler", image = "", imgRes = R.drawable.baler))
+    add(ResourceCategory(name = "Thresher", image = "", imgRes = R.drawable.thresher))
+  }
+}
+
+fun sampleLabor(): List<ResourceCategory> {
+  return mutableListOf<ResourceCategory>().apply {
+    add(ResourceCategory(name = "Expertise Transportation", "", imgRes = R.drawable.transportation))
+    add(ResourceCategory(name = "Expertise Sowing", "", imgRes = R.drawable.sowing))
+    add(ResourceCategory(name = "Harvesting Transportation", "",
+      imgRes = R.drawable.combine_harvester))
+  }
+}
+
+fun sampleTractors(): List<ResourceItem> {
   return mutableListOf<ResourceItem>().apply {
-    add(ResourceItem("Mahindra Tractor", "Someone", "", 1f, 500, 14, "Lonavala, Maharashtra"))
-    add(ResourceItem("Other Tractor", "Someone Else", "", 1f, 400, 18, "Hadapsar, Maharashtra"))
-    add(ResourceItem("Another Tractor", "Anyone", "", 1f, 700, 5, "Shivaji Nagar, Maharashtra"))
-    add(ResourceItem("Some other Tractor", "Anonymous", "", 1f, 600, 10, "Akurdi, Maharashtra"))
+    add(ResourceItem("Mahindra Tractor", "Aditya Ambre", "", 1f, 500, 14, "Lonavala, Maharashtra", imgRes = R.drawable.mahindra))
+    add(ResourceItem("Swaraj Tractor", "Akash Yadav", "", 1f, 400, 18, "Hadapsar, Maharashtra", imgRes = R.drawable.swaraj))
+    add(ResourceItem("Eicher Tractor", "Jayesh Patil", "", 1f, 600, 10, "Jalgaon, Maharashtra", imgRes = R.drawable.eicher))
+    add(ResourceItem("John Deere Tractor", "Prathamesh", "", 1f, 700, 5,
+      "Shivaji Nagar, Maharashtra", imgRes = R.drawable.john_deere))
+    add(ResourceItem("Sonalika Tractor", "Harsh", "", 1f, 150, 5, "Akurdi, Maharashtra", imgRes = R.drawable.sonalika))
   }
 }

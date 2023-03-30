@@ -34,6 +34,10 @@
   <fragment
     android:id="@+id/resourceListFragment"
     android:name="com.farmbuddy.fragments.ResourceListFragment"
-    android:label="ResourceListFragment" />
+    android:label="ResourceListFragment" >
+    <argument
+      android:name="resources"
+      app:argType="com.farmbuddy.models.ResourceItem[]" />
+  </fragment>
 
 </navigation>
