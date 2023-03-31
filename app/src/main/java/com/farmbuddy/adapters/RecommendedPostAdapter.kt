@@ -35,15 +35,17 @@ internal class RecommendedPostAdapter(val items: List<RecommendedPost>) :
     binding.title.text = post.title
     binding.description.text = post.description
 
-    try {
-      Glide.with(binding.image).load(post.image).centerCrop().into(binding.image)
-    } catch (e: Exception) {
-      e.printStackTrace()
-      binding.image.setImageResource(R.drawable.ic_failed)
-      binding.image.setColorFilter(
-        ContextCompat.getColor(binding.image.context, android.R.color.white),
-        PorterDuff.Mode.SRC_ATOP)
-    }
+    post.imgRes?.let(binding.image::setImageResource)
+
+//    try {
+//      Glide.with(binding.image).load(post.image).centerCrop().into(binding.image)
+//    } catch (e: Exception) {
+//      e.printStackTrace()
+//      binding.image.setImageResource(R.drawable.ic_failed)
+//      binding.image.setColorFilter(
+//        ContextCompat.getColor(binding.image.context, android.R.color.white),
+//        PorterDuff.Mode.SRC_ATOP)
+//    }
 
     post.tags.forEach {
       val chip = Chip(binding.root.context)

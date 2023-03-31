@@ -18,7 +18,9 @@ class HomeFragment :
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.featuredList.adapter = FeaturedPostAdapter(sampleFeaturedPosts())
+    binding.featuredList.adapter = FeaturedPostAdapter(sampleFeaturedPosts()) {
+
+    }
     binding.recommendedList.adapter = RecommendedPostAdapter(sampleRecommendedPosts())
   }
 }

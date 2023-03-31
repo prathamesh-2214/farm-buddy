@@ -11,7 +11,8 @@ import kotlinx.parcelize.Parcelize
 open class ResourceCategory(val name: String, val image: String,
   @DrawableRes val imgRes: Int? = null, @DrawableRes val btnIcon: Int? = null,
   val subCategories: List<ResourceCategory> = emptyList(),
-  val resources: List<ResourceItem> = emptyList()) : Parcelable
+  val resources: List<ResourceItem> = emptyList(),
+  val descImages: List<Int> = emptyList()) : Parcelable
 
 /**
  * @author Akash Yadav

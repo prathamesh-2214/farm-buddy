@@ -27,13 +27,17 @@ class NewResourcesFragment :
           if (category.resources.isNotEmpty()) {
             findNavController().navigate(
               NewResourcesFragmentDirections.actionNewResourcesFragmentToResourceListFragment(
-                category.resources.toTypedArray()))
+                category.resources.toTypedArray(), category))
+          } else if (category.descImages.isNotEmpty()) {
+            findNavController().navigate(
+              NewResourcesFragmentDirections.actionNewResourcesFragmentToResourceDescriptionFragment(
+                category.descImages.toIntArray()))
           }
         }
       } else if (it.resources.isNotEmpty()) {
         findNavController().navigate(
           NewResourcesFragmentDirections.actionNewResourcesFragmentToResourceListFragment(
-            it.resources.toTypedArray()))
+            it.resources.toTypedArray(), category = it))
       }
     }
   }

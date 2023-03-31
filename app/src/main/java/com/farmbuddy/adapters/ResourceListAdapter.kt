@@ -10,7 +10,7 @@ import com.farmbuddy.models.ResourceItem
 /**
  * @author Akash Yadav
  */
-internal class ResourceListAdapter(private val items: List<ResourceItem>) :
+internal class ResourceListAdapter(private val items: List<ResourceItem>, private val onClick: ((ResourceItem) -> Unit)? = null) :
   RecyclerView.Adapter<ResourceListAdapter.VH>() {
 
   internal class VH(internal val binding: LayoutResourceItemBinding) :
@@ -40,6 +40,10 @@ internal class ResourceListAdapter(private val items: List<ResourceItem>) :
 
     if (res.imgRes != null) {
       binding.image.setImageResource(res.imgRes)
+    }
+
+    binding.root.setOnClickListener {
+      onClick?.invoke(res)
     }
   }
 }

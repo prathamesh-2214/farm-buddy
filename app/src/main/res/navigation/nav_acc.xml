@@ -7,8 +7,8 @@
 
   <fragment
     android:id="@+id/profileFragment"
-    android:label="ProfileFragment"
     android:name="com.farmbuddy.fragments.ProfileFragment"
+    android:label="ProfileFragment"
     tools:layout="@layout/fragment_profile">
     <action
       android:id="@+id/action_profileFragment_to_newResourcesFragment"
@@ -19,25 +19,44 @@
   </fragment>
   <fragment
     android:id="@+id/newResourcesFragment"
-    android:label="NewResourcesFragment"
     android:name="com.farmbuddy.fragments.NewResourcesFragment"
-    tools:layout="@layout/fragment_new_resources" >
+    android:label="NewResourcesFragment"
+    tools:layout="@layout/fragment_new_resources">
     <action
       android:id="@+id/action_newResourcesFragment_to_resourceListFragment"
       app:destination="@id/resourceListFragment" />
+    <action
+      android:id="@+id/action_newResourcesFragment_to_resourceDescriptionFragment"
+      app:destination="@id/resourceDescriptionFragment" />
   </fragment>
   <fragment
     android:id="@+id/checkResourcesFragment"
-    android:label="CheckResourcesFragment"
     android:name="com.farmbuddy.fragments.CheckResourcesFragment"
+    android:label="CheckResourcesFragment"
     tools:layout="@layout/fragment_check_resources" />
   <fragment
     android:id="@+id/resourceListFragment"
     android:name="com.farmbuddy.fragments.ResourceListFragment"
-    android:label="ResourceListFragment" >
+    android:label="ResourceListFragment"
+    tools:layout="@layout/fragment_resource_list">
     <argument
       android:name="resources"
       app:argType="com.farmbuddy.models.ResourceItem[]" />
+    <action
+      android:id="@+id/action_resourceListFragment_to_resourceDescriptionFragment"
+      app:destination="@id/resourceDescriptionFragment" />
+    <argument
+      android:name="category"
+      app:argType="com.farmbuddy.models.ResourceCategory" />
+  </fragment>
+  <fragment
+    android:id="@+id/resourceDescriptionFragment"
+    android:name="com.farmbuddy.fragments.ResourceDescriptionFragment"
+    android:label="ResourceDescriptionFragment"
+    tools:layout="@layout/fragment_res_desc" >
+    <argument
+      android:name="images"
+      app:argType="integer[]" />
   </fragment>
 
 </navigation>

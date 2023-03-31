@@ -19,6 +19,7 @@
       android:id="@+id/image"
       android:layout_width="72dp"
       android:layout_height="0dp"
+      android:scaleType="centerCrop"
       android:contentDescription="@string/recommended_for_you"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"

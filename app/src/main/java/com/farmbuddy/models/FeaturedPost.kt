@@ -7,4 +7,5 @@ import kotlinx.parcelize.Parcelize
  * @author Akash Yadav
  */
 @Parcelize
-data class FeaturedPost(val imageUrl: String, val title: String) : Parcelable
+data class FeaturedPost(val imageUrl: String, val title: String, val imgRes: Int? = null,
+  val descImages: List<Int> = emptyList()) : Parcelable

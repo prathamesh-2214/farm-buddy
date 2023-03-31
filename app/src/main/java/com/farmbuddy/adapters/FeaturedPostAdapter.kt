@@ -13,7 +13,7 @@ import com.farmbuddy.models.FeaturedPost
 /**
  * @author Akash Yadav
  */
-internal class FeaturedPostAdapter(private val items: List<FeaturedPost>) :
+internal class FeaturedPostAdapter(private val items: List<FeaturedPost>, private val onClick: (FeaturedPost) -> Unit) :
   RecyclerView.Adapter<FeaturedPostAdapter.VH>() {
 
   class VH(internal val binding: LayoutFeaturedPostBinding) : RecyclerView.ViewHolder(binding.root)
@@ -31,15 +31,16 @@ internal class FeaturedPostAdapter(private val items: List<FeaturedPost>) :
     val binding = holder.binding
 
     binding.title.text = post.title
+    post.imgRes?.let(binding.image::setImageResource)
 
-    try {
-      Glide.with(binding.image).load(post.imageUrl).centerCrop().into(binding.image)
-    } catch (e: Exception) {
-      e.printStackTrace()
-      binding.image.setImageResource(R.drawable.ic_failed)
-      binding.image.setColorFilter(
-        ContextCompat.getColor(binding.image.context, android.R.color.white),
-        PorterDuff.Mode.SRC_ATOP)
-    }
+//    try {
+//      Glide.with(binding.image).load(post.imageUrl).centerCrop().into(binding.image)
+//    } catch (e: Exception) {
+//      e.printStackTrace()
+//      binding.image.setImageResource(R.drawable.ic_failed)
+//      binding.image.setColorFilter(
+//        ContextCompat.getColor(binding.image.context, android.R.color.white),
+//        PorterDuff.Mode.SRC_ATOP)
+//    }
   }
 }
